@@ -3,7 +3,7 @@ import { render } from '@testing-library/react'
 // import { TranslationProvider } from "my-i18n-lib"
 // import defaultStrings from "i18n/en-x-default"
 
-const Providers = ({ children }) => {
+const Providers = ({ children }: any) => {
   return children
   // return (
   //   <ThemeProvider theme="light">
@@ -14,7 +14,8 @@ const Providers = ({ children }) => {
   // )
 }
 
-const customRender = (ui, options = {}) =>
+// eslint-disable-next-line @typescript-eslint/explicit-module-boundary-types
+const customRender = (ui: any, options = {}) =>
   render(ui, { wrapper: Providers, ...options })
 
 // re-export everything
