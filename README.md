@@ -1,6 +1,8 @@
-# NextJS Typescript Boilerplate
+# Favorite react custom hooks
 
-Bootstrap a developer-friendly NextJS app configured with:
+What's your favorite react custom hooks(RCOH)? Let me know!
+
+## Tech stack
 
 - [Typescript](https://www.typescriptlang.org/)
 - Linting with [ESLint](https://eslint.org/)
@@ -8,20 +10,25 @@ Bootstrap a developer-friendly NextJS app configured with:
 - Linting, typechecking and formatting on by default using [`husky`](https://github.com/typicode/husky) for commit hooks
 - Testing with [Jest](https://jestjs.io/) and [`react-testing-library`](https://testing-library.com/docs/react-testing-library/intro)
 
-## Deploy your own
+## Running it on local
 
-Deploy the example using [Vercel](https://vercel.com):
+1. Clone the project:
 
-[![Deploy with Vercel](https://vercel.com/button)](https://vercel.com/import/project?template=https://github.com/vercel/next.js/tree/canary/examples/with-typescript-eslint-jest)
+~~~ console
+$ git clone https://github.com/varbachakov/RCOH.git
+~~~
 
-## How to use
+2. Install the dependencies:
 
-Execute [`create-next-app`](https://github.com/vercel/next.js/tree/canary/packages/create-next-app) with [npm](https://docs.npmjs.com/cli/init) or [Yarn](https://yarnpkg.com/lang/en/docs/cli/create/) to bootstrap the example:
+~~~ console
+$ cd RCOH
+$ npm i
+~~~
 
-```bash
-npx create-next-app --example with-typescript-eslint-jest with-typescript-eslint-jest-app
-# or
-yarn create next-app --example with-typescript-eslint-jest with-typescript-eslint-jest-app
-```
+3. Run it on the local:
 
-Deploy it to the cloud with [Vercel](https://vercel.com/import?filter=next.js&utm_source=github&utm_medium=readme&utm_campaign=next-example) ([Documentation](https://nextjs.org/docs/deployment)).
+~~~
+$ npm run dev
+~~~
+
+Open http://localhost:3000 in your browser to see it in action.
