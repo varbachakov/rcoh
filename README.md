@@ -1,5 +1,4 @@
 # Favorite react custom hooks
-
 What's your favorite react custom hooks(RCOH)? Let me know!
 
 ## Tech stack
@@ -13,20 +12,17 @@ What's your favorite react custom hooks(RCOH)? Let me know!
 ## Running it on local
 
 1. Clone the project:
-
 ~~~ console
 $ git clone https://github.com/varbachakov/RCOH.git
 ~~~
 
 2. Install the dependencies:
-
 ~~~ console
 $ cd RCOH
 $ npm i
 ~~~
 
 3. Run it on the local:
-
 ~~~
 $ npm run dev
 ~~~
