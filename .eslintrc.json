@@ -4,12 +4,17 @@
   "extends": [
     "eslint:recommended",
     "plugin:react/recommended",
-    "plugin:@typescript-eslint/recommended"
-    // Uncomment the following lines to enable eslint-config-prettier
-    // Is not enabled right now to avoid issues with the Next.js repo
-    // "prettier",
-    // "prettier/@typescript-eslint"
+    "htmlacademy/es5",
+    "plugin:@typescript-eslint/recommended",
+    "plugin:react-hooks/recommended",
+     "prettier",
+     "prettier/@typescript-eslint"
   ],
+  "settings": {
+    "react": {
+      "version": "latest"
+    }
+  },
   "env": {
     "es6": true,
     "browser": true,
@@ -27,6 +32,7 @@
     "@typescript-eslint/no-explicit-any": 0,
     "@typescript-eslint/no-var-requires": 0,
     "@typescript-eslint/no-use-before-define": 0,
+    "object-curly-spacing": ["error", "always"],
     "@typescript-eslint/no-unused-vars": [
       2,
       {
@@ -38,6 +44,7 @@
       {
         "allow": ["warn", "error"]
       }
-    ]
+    ],
+    "consistent-return": 0
   }
 }
