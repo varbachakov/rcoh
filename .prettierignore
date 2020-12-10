@@ -1,6 +1,6 @@
 node_modules
 .next
 yarn.lock
-package-lock.json
+*.json
 public
-.idea
+next-env.d.ts
