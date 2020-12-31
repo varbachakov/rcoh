@@ -7,22 +7,23 @@
     "dev": "next dev",
     "build": "next build",
     "start": "next start",
-    "type-check": "tsc --pretty --noEmit",
+    "ts": "tsc --pretty --noEmit",
     "format": "prettier --write .",
     "lint": "eslint . --ext ts --ext tsx --ext js",
+    "test:watch": "jest --watch",
     "test": "jest",
-    "test-all": "npm run lint && npm run type-check && npm run test"
+    "test-all": "npm run lint && npm run ts && npm run test"
   },
   "husky": {
     "hooks": {
       "pre-commit": "lint-staged",
-      "pre-push": "npm run type-check"
+      "pre-push": "npm run test"
     }
   },
   "lint-staged": {
     "*.@(ts|tsx)": [
       "npm run lint",
-      "npm run format"
+      "npm run ts"
     ]
   },
   "dependencies": {
@@ -43,7 +44,7 @@
     "eslint-config-prettier": "^7.0.0",
     "eslint-plugin-react": "^7.21.5",
     "eslint-plugin-react-hooks": "^4.2.0",
-    "husky": "^4.3.5",
+    "husky": "^5.0.6",
     "identity-obj-proxy": "^3.0.0",
     "jest": "^26.6.3",
     "jest-watch-typeahead": "^0.6.1",
