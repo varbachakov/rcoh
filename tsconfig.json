@@ -21,7 +21,8 @@
     "resolveJsonModule": true,
     "baseUrl": ".",
     "paths": {
-      "@/pages/*": ["pages/*"]
+      "@/pages/*": ["pages/*"],
+      "@/test/*": ["test/*"]
     }
   },
   "exclude": ["dist", ".next", "out", "next.config.js"],
