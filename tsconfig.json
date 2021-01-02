@@ -22,6 +22,7 @@
     "baseUrl": ".",
     "paths": {
       "@/pages/*": ["pages/*"],
+      "@/src/*": ["src/*"],
       "@/test/*": ["test/*"]
     }
   },

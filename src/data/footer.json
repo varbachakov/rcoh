@@ -1,0 +1,36 @@
+{
+  "tech": [
+    {
+      "text": "Next.js",
+      "href": "https://nextjs.org/"
+    },
+    {
+      "text": "Typescript",
+      "href": "https://www.typescriptlang.org/"
+    },
+    {
+      "text": "ESLint",
+      "href": "https://eslint.org/"
+    },
+    {
+      "text": "React Testing Library",
+      "href": "https://testing-library.com/"
+    },
+    {
+      "text": "Jest",
+      "href": "https://jestjs.io/"
+    }
+  ],
+  "projects": [
+    {
+      "text": "RCOH",
+      "href": "https://github.com/varbachakov/RCOH"
+    }
+  ],
+  "contacts": [
+    {
+      "text": "github",
+      "href": "https://github.com/varbachakov"
+    }
+  ]
+}
