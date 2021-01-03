@@ -1,7 +1,7 @@
 import { theme, colors, breakpoints } from '@/src/assets/styles';
 import css from 'styled-jsx/css';
 
-export default css`
+const styles = css`
   .footer {
     padding-bottom: 32px;
     border-top: 1px solid ${colors.gray.one};
@@ -33,3 +33,5 @@ export default css`
     }
   }
 `;
+
+export default styles;

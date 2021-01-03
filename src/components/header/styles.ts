@@ -1,7 +1,7 @@
-import { theme, colors, typography } from '@/src/assets/styles';
 import css from 'styled-jsx/css';
+import { theme, colors, typography } from '@/src/assets/styles';
 
-export default css`
+const styles = css`
   .header {
     padding: 10px 0;
     box-shadow: inset 0 -1px 0 ${colors.gray.one};
@@ -17,8 +17,8 @@ export default css`
   
   .header__logo {
     font-family: ${theme.secondary.family};
-    font-size: ${typography.textXl};
-    font-weight: ${typography.weightBold};
+    font-size: ${typography.fontSize.six};
+    font-weight: ${typography.fontWeight.two};
   }
   
   .header__git {
@@ -32,3 +32,5 @@ export default css`
     color: ${colors.gray.two};
   }
 `;
+
+export default styles;

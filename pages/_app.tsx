@@ -1,4 +1,4 @@
-import { container, fontFace, global, normalize } from '@/src/assets/styles';
+import { container, fontFace, globalStyles, normalize } from '@/src/assets/styles';
 import type { AppProps } from 'next/app';
 
 function RCOH({ Component, pageProps }: AppProps): JSX.Element {
@@ -13,7 +13,7 @@ function RCOH({ Component, pageProps }: AppProps): JSX.Element {
         {normalize}
       </style>
       <style jsx global>
-        {global}
+        {globalStyles}
       </style>
       <style jsx global>
         {container}
