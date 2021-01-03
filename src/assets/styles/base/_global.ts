@@ -1,8 +1,8 @@
-import css from 'styled-jsx/css';
+import { global } from 'styled-jsx/css';
 import { theme } from '../theme';
 import { transitions } from '../variables';
 
-const global = css.global`
+const globalStyles = global`
     body {
       min-width: 320px;
       color: ${theme.primary.colors.text};
@@ -38,4 +38,4 @@ const global = css.global`
     }
 `;
 
-export { global }
+export { globalStyles }

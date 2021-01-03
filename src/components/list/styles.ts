@@ -1,6 +1,7 @@
 import css from 'styled-jsx/css';
+import { colors, typography } from '@/src/assets/styles';
 
-export default css`
+const styles = css`
   .list {
     margin: 0;
     padding: 0;
@@ -9,17 +10,19 @@ export default css`
   
   .list__item {
     margin-top: 10px;
-    font-size: 13px;
-    line-height: 16px;
+    font-size: ${typography.fontSize.one};
+    line-height: ${typography.lineHeight.one};
   }
   
   .list__link {
     font-size: inherit;
     line-height: inherit;
-    color: #8c8c8c;
+    color: ${colors.gray.four};
   }
 
   .list__link:hover {
-    color: #111;
+    color: ${colors.dark.one};
   }
 `;
+
+export default styles;

@@ -2,9 +2,9 @@ import { typography } from '../base';
 import { colors } from '../variables';
 
 const primary = {
-  family: typography.primary,
-  size: typography.textMd,
-  weight: typography.weightBody,
+  family: typography.fontFamily.one,
+  size: typography.fontSize.three,
+  weight: typography.fontWeight.two,
   colors: {
     text: colors.dark.one,
     backgroundColorBody: colors.white.one,

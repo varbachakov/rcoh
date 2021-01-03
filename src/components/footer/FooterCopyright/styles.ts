@@ -1,7 +1,7 @@
 import { colors, typography, breakpoints } from '@/src/assets/styles';
 import css from 'styled-jsx/css';
 
-export default css`
+const styles = css`
   .footer-copyright {
     display: flex;
     justify-content: center;
@@ -26,7 +26,7 @@ export default css`
   .footer-copyright__text {
     width: 100%;
     margin-top: 8px;
-    font-size: ${typography.textSm};
+    font-size: ${typography.fontSize.two};
     color: ${colors.gray.four};
     text-align: center;
   }
@@ -36,3 +36,5 @@ export default css`
     }
   }
 `;
+
+export default styles;

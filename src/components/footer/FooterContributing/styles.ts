@@ -1,7 +1,7 @@
-import { colors, borderRadius, breakpoints } from '@/src/assets/styles';
 import css from 'styled-jsx/css';
+import { colors, borderRadius, breakpoints } from '@/src/assets/styles';
 
-export default css`
+const styles = css`
   .footer-contributing {
     display: flex;
     flex-wrap: wrap;
@@ -46,3 +46,5 @@ export default css`
     color: ${colors.gray.four};
   }
 `;
+
+export default styles;
