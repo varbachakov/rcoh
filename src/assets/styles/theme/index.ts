@@ -4,6 +4,6 @@ import { secondary } from '@/src/assets/styles/theme/_secondary';
 const theme = {
   primary,
   secondary
-}
+};
 
-export { theme }
+export { theme };

@@ -5,7 +5,7 @@ function App(): JSX.Element {
     <Layout>
       <main style={{ height: '100vh' }}>main</main>
     </Layout>
-  )
+  );
 }
 
-export default App
+export default App;

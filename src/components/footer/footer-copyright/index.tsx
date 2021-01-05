@@ -1,4 +1,4 @@
-import styles from './styles'
+import styles from './styles';
 import { GITHUB_URL } from '@/src/constants/url';
 import { GitHub } from '@/src/assets/svg-inline';
 
@@ -14,7 +14,7 @@ function FooterCopyright():JSX.Element {
         {styles}
       </style>
     </div>
-  )
+  );
 }
 
-export default FooterCopyright
+export default FooterCopyright;

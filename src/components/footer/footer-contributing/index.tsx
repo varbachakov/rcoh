@@ -15,7 +15,7 @@ function FooterContributing(): JSX.Element {
         {styles}
       </style>
     </div>
-  )
+  );
 }
 
-export default FooterContributing
+export default FooterContributing;

@@ -33,6 +33,8 @@
     "@typescript-eslint/no-var-requires": 0,
     "@typescript-eslint/no-use-before-define": 0,
     "object-curly-spacing": ["error", "always"],
+    "semi": "error",
+    "no-unused-expressions": ["error", { "allowShortCircuit": true }],
     "@typescript-eslint/no-unused-vars": [
       2,
       {
@@ -42,7 +44,7 @@
     "no-console": [
       2,
       {
-        "allow": ["warn", "error"]
+        "allow": ["warn", "error", "info"]
       }
     ],
     "consistent-return": 0

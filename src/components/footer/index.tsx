@@ -1,8 +1,8 @@
 import styles from './styles';
-import FooterContributing from '@/src/components/footer/FooterContributing';
-import FooterCopyright from '@/src/components/footer/FooterCopyright';
-import FooterGroup from '@/src/components/footer/FooterGroup';
-import dataLinksFooter from '@/src/data/footer.json'
+import FooterContributing from './footer-contributing';
+import FooterCopyright from './footer-copyright';
+import FooterGroup from './footer-group';
+import dataLinksFooter from '@/src/data/footer.json';
 
 function Footer():JSX.Element {
   return (
@@ -21,7 +21,7 @@ function Footer():JSX.Element {
         {styles}
       </style>
     </footer>
-  )
+  );
 }
 
-export default Footer
+export default Footer;

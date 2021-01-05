@@ -1,5 +1,5 @@
 import css from 'styled-jsx/css';
-import { breakpoints } from '../variables'
+import { breakpoints } from '../variables';
 
 const container = css.global`
   .container {
@@ -9,7 +9,6 @@ const container = css.global`
     padding-left: 15px;
     padding-right: 15px;
   }
-  
   @media (min-width: ${breakpoints.mobile}px){
     .container {
       padding-right: 20px;
@@ -18,4 +17,4 @@ const container = css.global`
   }
 `;
 
-export { container }
+export { container };

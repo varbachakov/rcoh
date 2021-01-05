@@ -1,16 +1,25 @@
-import styles from './styles'
-import { GitHub } from '@/src/assets/svg-inline'
-import { GITHUB_URL } from '@/src/constants/url'
+import { useState, useCallback, SyntheticEvent } from 'react';
+import styles from './styles';
+import HeaderLogo from './header-logo';
+import HeaderSearch from './header-search';
+import HeaderGithub from './header-github';
 
 function Header(): JSX.Element {
+  const [isInputActive, setActive] = useState(false);
+
+  const handleInputActive = useCallback((event: SyntheticEvent) => {
+    if ((event.target as HTMLInputElement).name === 'search' && isInputActive) return;
+
+    setActive(!isInputActive);
+  }, [isInputActive]);
+
   return (
     <header className="header">
       <div className="container">
         <div className="header__mode">
-          <span className="header__logo">RCOH</span>
-          <a href={GITHUB_URL} className="header__git" rel="noopener noreferrer" target="_blank">
-            <GitHub/>
-          </a>
+          <HeaderLogo isInputActive={isInputActive}/>
+          <HeaderSearch isInputActive={isInputActive} handleInputActive={handleInputActive}/>
+          <HeaderGithub isInputActive={isInputActive}/>
         </div>
       </div>
 
@@ -18,7 +27,7 @@ function Header(): JSX.Element {
         {styles}
       </style>
     </header>
-  )
+  );
 }
 
-export default Header
+export default Header;
