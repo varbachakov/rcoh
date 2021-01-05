@@ -8,6 +8,7 @@ const globalStyles = global`
       color: ${theme.primary.colors.text};
       font-family: ${theme.primary.family};
       font-size: ${theme.primary.size};
+      line-height: ${theme.primary.lineHeight};
       font-weight: ${theme.primary.weight};
       background-color: ${theme.primary.colors.backgroundColorBody};
       overflow-x: hidden;
@@ -15,8 +16,6 @@ const globalStyles = global`
     
         
     svg {
-      width: inherit;
-      height: inherit;
       fill: currentColor;
       display: block;
     }
@@ -28,14 +27,34 @@ const globalStyles = global`
       -webkit-tap-highlight-color: transparent;
       -webkit-font-smoothing: inherit;
       cursor: pointer;
+      outline: none;
       transition: color ${transitions.delay['200']} ${transitions.easing.easeInOut}, background-color ${transitions.delay['200']} ${transitions.easing.easeInOut};
     }
     
-    h1,h2,h3,h4,h5,h6 {
+    button {
+      border-width: initial;
+      border-style: none;
+      border-color: initial;
+      border-image: initial;
+      background-color: transparent;
+      user-select: none;
+      appearance: none;
+      position: relative;
+      letter-spacing: 0;
+      padding: 0;
+      font: inherit;
+      color: inherit;
+      cursor: pointer;
+      outline: none;
+      -webkit-tap-highlight-color: transparent;
+      transition: background-color ${transitions.delay['300']} ${transitions.easing.easeInOut}, color ${transitions.delay['300']} ${transitions.easing.easeInOut};
+    }
+    
+    h1, h2, h3, h4, h5, h6 {
      margin: 0;
      font-size: inherit;
      font-weight: inherit;
     }
 `;
 
-export { globalStyles }
+export { globalStyles };

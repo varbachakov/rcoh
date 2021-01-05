@@ -1,5 +1,5 @@
 import css from 'styled-jsx/css';
-import { colors, borderRadius, breakpoints } from '@/src/assets/styles';
+import { colors, borderRadius, breakpoints, typography } from '@/src/assets/styles';
 
 const styles = css`
   .footer-contributing {
@@ -12,8 +12,8 @@ const styles = css`
   .footer-contributing__title {
     max-width: fit-content;
     margin-bottom: 10px;
-    font-size: 28px;
-    line-height: 36px;
+    font-size: ${typography.fontSize.four};
+    line-height: ${typography.lineHeight.four};
   }
   
   .footer-contributing__rcoh {

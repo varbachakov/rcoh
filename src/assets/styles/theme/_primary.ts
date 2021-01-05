@@ -3,7 +3,8 @@ import { colors } from '../variables';
 
 const primary = {
   family: typography.fontFamily.one,
-  size: typography.fontSize.three,
+  size: typography.fontSize.two,
+  lineHeight: typography.lineHeight.two,
   weight: typography.fontWeight.two,
   colors: {
     text: colors.dark.one,
@@ -13,4 +14,4 @@ const primary = {
   }
 };
 
-export { primary }
+export { primary };

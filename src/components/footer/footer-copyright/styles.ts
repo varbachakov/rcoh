@@ -26,7 +26,8 @@ const styles = css`
   .footer-copyright__text {
     width: 100%;
     margin-top: 8px;
-    font-size: ${typography.fontSize.two};
+    font-size: ${typography.fontSize.one};
+    line-height: ${typography.lineHeight.one};
     color: ${colors.gray.four};
     text-align: center;
   }

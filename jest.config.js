@@ -1,5 +1,3 @@
-const path = require('path')
-
 module.exports = {
   roots: ['<rootDir>'],
   moduleFileExtensions: ['ts', 'tsx', 'js', 'json', 'jsx'],
@@ -8,10 +6,6 @@ module.exports = {
   transform: {
     '^.+\\.(ts|tsx)$': 'babel-jest',
   },
-  watchPlugins: [
-    'jest-watch-typeahead/filename',
-    'jest-watch-typeahead/testname',
-  ],
   moduleNameMapper: {
     '\\.(gif|ttf|eot|svg|png)$': '<rootDir>/test/__mocks__/fileMock.js',
     '@/pages/(.*)': '<rootDir>/pages/$1',
