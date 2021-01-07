@@ -1,9 +1,21 @@
 import Layout from '@/src/components/layout';
-
-function App(): JSX.Element {
+import Hero from '@/src/components/hero';
+import Title from '@/src/components/title';
+import Product from '@/src/components/product';
+import { PropsTypes } from './types';
+// import dynamic from 'next/dynamic';
+// const DynamicComponentWithNoSSR = dynamic(
+//   () => import('@/src/components/product'),
+//   { ssr: false }
+// );
+function App(props: PropsTypes): JSX.Element {
   return (
     <Layout>
-      <main style={{ height: '100vh' }}>main</main>
+      <main>
+        <Hero/>
+        <Title/>
+        <Product {...props}/>
+      </main>
     </Layout>
   );
 }

@@ -1,0 +1,24 @@
+~~~js
+import { useState } from 'react';
+
+export const useToggle = (init) => {
+  const [isToggle, setToggle] = useState(init);
+  const toggle = () => setToggle(prevState => !prevState);
+
+  return [isToggle, toggle];
+};
+
+// Examples
+const Toggle = () => {
+  const [isToggle, toggle] = useToggle(false);
+
+  return (
+    <div>
+      <button onClick={toggle}>Toggle</button>
+      {isToggle && <p>To be toggled</p>}
+    </div>
+  );
+};
+
+export default Toggle;
+~~~

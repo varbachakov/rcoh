@@ -1,0 +1,29 @@
+~~~js
+import { useState, useEffect } from 'react';
+import Cookies from 'js-cookie';
+
+export const useCookies = ({ key }) => {
+  const init = Cookies.get(key);
+  const [cookie, setStateCookie] = useState(init);
+
+  useEffect(() => {
+    Cookies.set(key, cookie);
+  }, [cookie, key]);
+
+  return [cookie, setStateCookie];
+};
+
+// Examples
+const Cookie = () => {
+  const [cookie, setCookie] = useCookies({ key: 'test' });
+
+  return(
+    <div>
+      <span>{cookie || ""}</span>
+      <button onClick={() => setCookie('add test cookies')}>add cookie</button>
+    </div>
+  );
+};
+
+export default Cookie;
+~~~

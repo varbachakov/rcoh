@@ -4,4 +4,4 @@ const secondary = {
   family: typography.fontFamily.two,
 };
 
-export { secondary }
+export { secondary };

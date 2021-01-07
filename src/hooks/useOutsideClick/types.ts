@@ -6,4 +6,6 @@ export type PropsTypes = {
   isOpen: boolean
 }
 
-export type ReturnTypes = void
+export type ReturnTypes = {
+  handleClickOutside: (event: SyntheticEvent) => void
+}
