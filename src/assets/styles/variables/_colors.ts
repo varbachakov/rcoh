@@ -16,7 +16,7 @@ const gray = {
 };
 
 const dark = {
-  one: "#111",
+  one: "#1c1e20",
   two: "#333",
 };
 

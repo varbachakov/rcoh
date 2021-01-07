@@ -1,5 +1,5 @@
 import styles from './styles';
-import List from '@/src/components/list';
+import List from '../footer-list';
 import { PropsTypes } from './types';
 
 function FooterGroup({ list, text }: PropsTypes): JSX.Element {

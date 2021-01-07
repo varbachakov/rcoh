@@ -13,4 +13,6 @@ export function useOutsideClick({ elementRef, closed, isOpen }: PropsTypes): Ret
       document.removeEventListener('click', handleClickOutside);
     };
   }, [handleClickOutside]);
+
+  return { handleClickOutside };
 }

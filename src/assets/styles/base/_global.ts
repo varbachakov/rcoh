@@ -1,6 +1,6 @@
 import { global } from 'styled-jsx/css';
 import { theme } from '../theme';
-import { transitions } from '../variables';
+import { transitions, breakpoints } from '../variables';
 
 const globalStyles = global`
     body {
@@ -54,6 +54,19 @@ const globalStyles = global`
      margin: 0;
      font-size: inherit;
      font-weight: inherit;
+    }
+    
+    img {
+      max-width: 100%;
+    }
+    
+    .hidden-xs {
+      display: none !important;
+    }
+    @media (min-width: ${breakpoints.mobile}px) {
+      .hidden-xs {
+        display: block !important;
+      }
     }
 `;
 

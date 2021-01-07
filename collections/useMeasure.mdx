@@ -1,0 +1,34 @@
+~~~js
+import { useState, useRef, useEffect } from 'react';
+
+export const useMeasure = () => {
+  const ref = useRef();
+  const [bounds, setBounds] = useState({ left: 0, top: 0, width: 0, height: 0, right: 0, x: 0, y: 0 });
+  const [resizeO] = useState(() => new ResizeObserver(([entry]) => setBounds(entry.contentRect)));
+
+  useEffect(() => {
+    if (!ref.current) return;
+
+    resizeO.observe(ref.current);
+
+    return () => {
+      resizeO.disconnect();
+    };
+  }, [resizeO]);
+
+  return [{ ref }, bounds];
+};
+
+// Examples
+const Measure = () => {
+  const [{ ref }, bounds] = useMeasure();
+
+  return (
+    <div ref={ref}>
+      <div>{bounds}</div>
+    </div>
+  );
+};
+
+export default Measure;
+~~~
