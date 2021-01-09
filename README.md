@@ -1,9 +1,15 @@
-# Favorite react custom hooks
+# React custom hooks
 
-What's your favorite react custom hooks(RCOH)? Let me know!
+Will you add your React Custom Hook to the RCOH project? Let me know!
+
+## Contributing
+
+Pull requests are welcome. To send your own react custom Hook, please
+create a markdown file, name it use{{name hook}} and place it in the [collection](https://github.com/varbachakov/rcoh/tree/main/collections/) folder.
 
 ## Tech stack
 
+- [Next.js](https://nextjs.org/)
 - [Typescript](https://www.typescriptlang.org/)
 - Linting with [ESLint](https://eslint.org/)
 - Formatting with [Prettier](https://prettier.io/)
@@ -15,13 +21,13 @@ What's your favorite react custom hooks(RCOH)? Let me know!
 1. Clone the project:
 
 ```console
-$ git clone https://github.com/varbachakov/RCOH.git
+$ git clone https://github.com/varbachakov/rcoh.git
 ```
 
 2. Install the dependencies:
 
 ```console
-$ cd RCOH
+$ cd rcoh
 $ npm i
 ```
 
