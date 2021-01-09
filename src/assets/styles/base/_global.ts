@@ -58,14 +58,15 @@ const globalStyles = global`
     
     img {
       max-width: 100%;
+      max-height: 100%;
     }
     
-    .hidden-xs {
+    .hidden-flex-xs {
       display: none !important;
     }
     @media (min-width: ${breakpoints.mobile}px) {
-      .hidden-xs {
-        display: block !important;
+      .hidden-flex-xs {
+        display: flex !important;
       }
     }
 `;

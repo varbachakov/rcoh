@@ -1,9 +1,10 @@
-import { render } from '@testing-library/react';
+import { render, act } from '@testing-library/react';
 import Index from './index';
 
 describe('testing Index page', () => {
-  test('should render success', () => {
+  test('should render success', async () => {
+    render(<Index hooks={[]}/>);
 
-    render(<Index />);
+    await act(() => Promise.resolve());
   });
 });

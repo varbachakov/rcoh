@@ -77,7 +77,7 @@ const styles = css`
     z-index: 2;
     width: 24px;
     height: 24px;
-    color: ${colors.gray.five};
+    color: ${colors.gray.four};
     cursor: pointer;
   }
   

@@ -1,0 +1,28 @@
+~~~js
+import { useState, useEffect } from 'react';
+
+export const useLocalStorage = (key, init) => {
+  const item = window.localStorage.getItem(key);
+  const [value, setValue] = useState(item || init);
+
+  useEffect(() => {
+    window.localStorage.setItem(key, value);
+  }, [value, key]);
+
+  return [value, setValue];
+};
+
+// Examples
+const LocalStorage = () => {
+  const [value, setValue] = useLocalStorage('test', 'init value');
+
+  return(
+    <div>
+      <span>{value || ""}</span>
+      <button onClick={() => setValue('add test initial value')}>add local storage</button>
+    </div>
+  );
+};
+
+export default LocalStorage;
+~~~

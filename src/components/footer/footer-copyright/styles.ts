@@ -28,7 +28,7 @@ const styles = css`
     margin-top: 8px;
     font-size: ${typography.fontSize.one};
     line-height: ${typography.lineHeight.one};
-    color: ${colors.gray.four};
+    color: ${colors.dark.two};
     text-align: center;
   }
   @media (min-width: ${breakpoints.mobile}px) {
