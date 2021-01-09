@@ -4,7 +4,8 @@ const white = {
 };
 
 const blue = {
-  one: "#a9c2ff"
+  one: "#a9c2ff",
+  two: "#58a6ff"
 };
 
 const gray = {

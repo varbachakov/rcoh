@@ -2,7 +2,7 @@ import path from 'path';
 import fs from 'fs';
 import { HomeWrapper } from '@/src/state/home-wrapper';
 import App from '@/src/components/app';
-import { HooksTypes, PropsTypesApp, ReturnStaticPropsTypes } from './types';
+import { HooksTypes, PropsTypesApp, ReturnStaticPropsTypes } from '@/other/home-types';
 
 function Home(props: PropsTypesApp): JSX.Element {
   return (

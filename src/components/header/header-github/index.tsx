@@ -8,7 +8,7 @@ type PropsTypes = {
 
 function HeaderGithub({ isInputActive }: PropsTypes): JSX.Element {
   return (
-    <a href={GITHUB_URL} className={isInputActive ? 'git git--search' : 'git'} rel="noopener noreferrer" target="_blank" >
+    <a href={GITHUB_URL} className={isInputActive ? 'git git--search' : 'git'} rel="noopener noreferrer" target="_blank" aria-label="go to github">
       <GitHub/>
 
       <style jsx>

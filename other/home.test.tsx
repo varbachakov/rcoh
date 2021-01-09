@@ -1,5 +1,5 @@
 import { render, act } from '@testing-library/react';
-import Index from './index';
+import Index from '../pages';
 
 describe('testing Index page', () => {
   test('should render success', async () => {
