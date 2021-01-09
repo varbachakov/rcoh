@@ -1,4 +1,4 @@
+next-env.d.ts
 **/node_modules/*
 **/out/*
 **/.next/*
-next-env.d.ts
