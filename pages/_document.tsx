@@ -1,6 +1,6 @@
 import Document, { Html, Head, Main, NextScript } from 'next/document';
 
-class MyDocument extends Document {
+class RCOHDocument extends Document {
   render(): JSX.Element {
     return (
       <Html lang="ru">
@@ -14,4 +14,4 @@ class MyDocument extends Document {
   }
 }
 
-export default MyDocument;
+export default RCOHDocument;
