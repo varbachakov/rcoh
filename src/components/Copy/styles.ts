@@ -12,7 +12,6 @@ const styles = css`
     display: flex;
     align-items: center;
     justify-content: center;
-    color: ${colors.dark.one};
   }
   @media (min-width: ${breakpoints.mobile}px) {
     .copy {
@@ -32,11 +31,11 @@ const styles = css`
   }
 
   .copy:hover :global(svg) {
-    color: ${colors.gray.four};
+    color: ${colors.dark.two};
   }
 
   .copy--active:hover :global(svg) {
-    color: ${colors.dark.one};
+    color: inherit;
   }
 `;
 

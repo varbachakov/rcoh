@@ -1,3 +1,6 @@
-import { HookTypes } from '@/pages/types';
+import { SyntheticEvent } from 'react';
 
-export type PropsTypes = HookTypes
+export type PropsTypes = {
+  hookName: string,
+  handleOpenModal: (e: SyntheticEvent) => void
+}

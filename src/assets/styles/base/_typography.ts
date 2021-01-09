@@ -4,7 +4,7 @@ const fontSize = {
   three: '17px',
   four: '28px',
   logo: '26px',
-  title: '32px',
+  title: '38px',
 };
 
 const lineHeight = {
@@ -13,7 +13,7 @@ const lineHeight = {
   three: '24px',
   four: '36px',
   logo: '30px',
-  title: '36px',
+  title: '42px',
 };
 
 const fontWeight = {

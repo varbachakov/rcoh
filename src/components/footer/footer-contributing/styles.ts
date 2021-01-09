@@ -43,7 +43,7 @@ const styles = css`
     margin-top: 10px;
     font-size: 14px;
     line-height: 18px;
-    color: ${colors.gray.four};
+    color: ${colors.dark.two};
   }
 `;
 

@@ -1,11 +1,14 @@
 import path from 'path';
 import fs from 'fs';
+import { HomeWrapper } from '@/src/state/home-wrapper';
 import App from '@/src/components/app';
 import { HooksTypes, PropsTypesApp, ReturnStaticPropsTypes } from './types';
 
 function Home(props: PropsTypesApp): JSX.Element {
   return (
-    <App {...props}/>
+    <HomeWrapper>
+      <App {...props}/>
+    </HomeWrapper>
   );
 }
 

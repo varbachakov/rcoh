@@ -1,9 +1,10 @@
 import styles from './styles';
+import { colors } from '@/src/assets/styles';
 import { CheckSvg, CopySvg } from '@/src/assets/svg-inline';
 import { useCopy } from '@/src/hooks';
 import { PropsTypes } from './types';
 
-function Copy({ text }: PropsTypes): JSX.Element {
+function Copy({ text, theme }: PropsTypes): JSX.Element {
   const [copy, setCopy] = useCopy({ text });
 
   return (
@@ -13,6 +14,11 @@ function Copy({ text }: PropsTypes): JSX.Element {
       <style jsx>
         {styles}
       </style>
+      <style jsx>{`
+        .copy {
+          color: ${theme === 'white' ? colors.white.one : colors.dark.one};
+        }
+     `}</style>
     </button>
   );
 }

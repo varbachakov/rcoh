@@ -4,20 +4,19 @@ const white = {
 };
 
 const blue = {
-  one: "#5282ff"
+  one: "#a9c2ff"
 };
 
 const gray = {
   one: "#e7eaf1",
   two: "#696969",
   three: "#eaeaea",
-  four: "#8c8c8c",
-  five: "#b2b2b2",
+  four: "#b2b2b2",
 };
 
 const dark = {
-  one: "#1c1e20",
-  two: "#333",
+  one: "#2b3b52",
+  two: "#666666",
 };
 
 const colors = {

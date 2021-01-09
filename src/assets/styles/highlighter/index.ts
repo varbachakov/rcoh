@@ -19,7 +19,7 @@ export const highlighter =  {
   },
   "pre[class*=\"language-\"]": {
     "color": "#f8f8f2",
-    "background": "#1c1e20",
+    "background": "#2b3b52",
     "fontFamily": "Consolas, Monaco, 'Andale Mono', 'Ubuntu Mono', monospace",
     "textAlign": "left",
     "whiteSpace": "pre",
@@ -40,7 +40,7 @@ export const highlighter =  {
     "borderRadius": "0.3em"
   },
   ":not(pre) > code[class*=\"language-\"]": {
-    "background": "#1c1e20",
+    "background": "#2b3b52",
     "padding": "0.1em",
     "borderRadius": "0.3em",
     "whiteSpace": "normal"

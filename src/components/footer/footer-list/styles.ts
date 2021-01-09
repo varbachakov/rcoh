@@ -11,7 +11,7 @@ const styles = css`
   .footer-list__link {
     font-size: inherit;
     line-height: inherit;
-    color: ${colors.gray.four};
+    color: ${colors.dark.two};
   }
 
   .footer-list__link:hover {
