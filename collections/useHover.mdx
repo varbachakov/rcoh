@@ -1,0 +1,30 @@
+~~~js
+import { useState, useMemo } from 'react';
+
+export function useHover() {
+  const [isHover, setHover] = useState(false);
+
+  const bind = useMemo(() => {
+    return {
+      onMouseOver: () => setHover(true),
+      onMouseLeave: () => setHover(false)
+    };
+  }, []);
+
+  return [isHover, bind];
+}
+
+
+// Examples
+const Hover = () => {
+  const [isHover, bind] = useHover();
+
+  return(
+    <div {...bind} style={{backgroundColor: isHover ? 'red' : 'green'}}>
+      <div>Hover</div>
+    </div>
+  );
+};
+
+export default Hover;
+~~~

@@ -8,7 +8,7 @@ describe('testing useToggle custom hook', () => {
     expect(result.current[0]).toBeFalsy();
 
     act(() => {
-      result.current[1](true);
+      result.current[1]();
     });
 
     expect(result.current[0]).toBeTruthy();
