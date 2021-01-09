@@ -1,3 +1,3 @@
-import { PropsTypesApp } from '@/pages/types';
+import { PropsTypesApp } from '@/other/home-types';
 
 export type PropsTypes = PropsTypesApp

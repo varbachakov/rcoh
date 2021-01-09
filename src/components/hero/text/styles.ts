@@ -27,6 +27,7 @@ const styles = css`
     line-height: ${typography.lineHeight.four};
     font-weight: ${typography.fontWeight.one};
     margin-bottom: 20px;
+    color: ${colors.dark.one};
   }
   @media (min-width: ${breakpoints.mobile}px) {
     .hero-text__title {
@@ -42,6 +43,7 @@ const styles = css`
   .hero-text__desc {
     margin-bottom: 20px;
     font-weight: ${typography.fontWeight.three};
+    color: ${colors.dark.two};
   }
 
   .hero-text__link {

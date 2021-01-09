@@ -1,6 +1,6 @@
 import styles from './styles';
 import dynamic from 'next/dynamic';
-import Copy from '@/src/components/Copy';
+import Copy from '@/src/components/copy';
 import ProductCard from '@/src/components/product/card';
 import ModalLoading from '@/src/components/modal/loading';
 import { useHomeState } from '@/src/state/home-wrapper';

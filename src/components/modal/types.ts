@@ -1,5 +1,5 @@
 import { SyntheticEvent } from 'react';
-import { HooksTypes } from '@/pages/types';
+import { HooksTypes } from '@/other/home-types';
 
 export type PropsTypes = {
   hooks: HooksTypes

@@ -8,7 +8,7 @@ function Copy({ text, theme }: PropsTypes): JSX.Element {
   const [copy, setCopy] = useCopy({ text });
 
   return (
-    <button className={copy ? "copy copy--active" : "copy"} type="button" onClick={() => setCopy(true)}>
+    <button className={copy ? "copy copy--active" : "copy"} type="button" onClick={() => setCopy(true)} aria-label="copy">
       {copy ? <CheckSvg/> : <CopySvg/>}
 
       <style jsx>

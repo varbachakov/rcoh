@@ -5,7 +5,7 @@ import { PropsTypes } from './types';
 function FooterGroup({ list, text }: PropsTypes): JSX.Element {
   return (
     <div className="footer-group">
-      <h5 className="footer-group__title">{text}</h5>
+      <h2 className="footer-group__title">{text}</h2>
       <List list={list}/>
 
       <style jsx>

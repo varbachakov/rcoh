@@ -35,7 +35,7 @@ function HeaderSearch({ isInputActive, handleInputActive }: PropsType): JSX.Elem
         />
         <span className="header-search__box"/>
       </span>
-      <button type="button" className="header-search__button" onClick={handleInputActive}>
+      <button type="button" className="header-search__button" onClick={handleInputActive} aria-label="search">
         <Search/>
       </button>
 

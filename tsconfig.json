@@ -21,7 +21,7 @@
     "resolveJsonModule": true,
     "baseUrl": ".",
     "paths": {
-      "@/pages/*": ["pages/*"],
+      "@/other/*": ["other/*"],
       "@/src/*": ["src/*"],
       "@/utils/*": ["utils/*"]
     }

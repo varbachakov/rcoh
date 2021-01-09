@@ -3,7 +3,7 @@ import { SyntheticEvent, useRef, useMemo } from 'react';
 import ReactMarkdown from 'react-markdown';
 import { renderers } from '@/src/utils/renderers';
 import { replaceHookCode } from '@/src/utils/replaceHookCode';
-import Copy from '@/src/components/Copy';
+import Copy from '@/src/components/copy';
 import { useOutsideClick } from '@/src/hooks';
 import { PropsTypes } from './types';
 

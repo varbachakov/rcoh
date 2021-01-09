@@ -8,7 +8,7 @@ module.exports = {
   },
   moduleNameMapper: {
     '\\.(gif|ttf|eot|svg|png)$': '<rootDir>/test/__mocks__/fileMock.js',
-    '@/pages/(.*)': '<rootDir>/pages/$1',
+    '@/other/(.*)': '<rootDir>/other/$1',
     '@/test/(.*)': '<rootDir>/test/$1',
     '@/src/(.*)': '<rootDir>/src/$1',
   },
