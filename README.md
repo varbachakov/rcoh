@@ -23,20 +23,20 @@ create a markdown file, name it use{{name hook}} and place it in the [collection
 1. Clone the project:
 
 ```console
-$ git clone https://github.com/varbachakov/rcoh.git
+git clone https://github.com/varbachakov/rcoh.git
 ```
 
 2. Install the dependencies:
 
 ```console
-$ cd rcoh
-$ npm i
+cd rcoh
+npm i
 ```
 
 3. Run it on the local:
 
 ```
-$ npm run dev
+npm run dev
 ```
 
 Open http://localhost:3000 in your browser to see it in action.
