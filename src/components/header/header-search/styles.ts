@@ -49,7 +49,7 @@ const styles = css`
     z-index: 2;
     width: 100%;
     height: 40px;
-    padding: 0;
+    padding: 0 25px 0 0;
     outline: 0;
     font-size: 13px;
     background: none;
