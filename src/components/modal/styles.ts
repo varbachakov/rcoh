@@ -19,7 +19,7 @@ const styles = css`
     left: 0;
     z-index: ${zIndex.modal};
     background: ${colors.white.one};
-    opacity: 0.9;
+    opacity: 0.7;
   }
   
   .modal__content {
