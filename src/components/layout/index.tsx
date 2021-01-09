@@ -1,13 +1,13 @@
 import styles from './styles';
 import Header from '@/src/components/header';
 import Footer from '@/src/components/footer';
-import { PropsTypes } from './types'
+import { PropsTypes } from './types';
 
-function Layout({ children }:PropsTypes): JSX.Element {
+function Layout({ children, hooks }: PropsTypes): JSX.Element {
   return (
     <div className="layout">
       <div className="layout__header" data-testid="layout-header">
-        <Header/>
+        <Header hooks={hooks}/>
       </div>
       <div className="layout__body" data-testid="layout-body">
         {children}
@@ -20,7 +20,7 @@ function Layout({ children }:PropsTypes): JSX.Element {
         {styles}
       </style>
     </div>
-  )
+  );
 }
 
-export default Layout
+export default Layout;

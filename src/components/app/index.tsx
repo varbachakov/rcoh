@@ -6,7 +6,7 @@ import { PropsTypes } from './types';
 
 function App(props: PropsTypes): JSX.Element {
   return (
-    <Layout>
+    <Layout {...props}>
       <main>
         <Hero/>
         <Title/>
