@@ -1,5 +1,5 @@
 ~~~js
-import { useState, useEffect } from 'react';
+import { useEffect, useState } from 'react';
 
 export const useLocalStorage = (key, init) => {
   const item = window.localStorage.getItem(key);
