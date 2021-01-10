@@ -1,0 +1,41 @@
+~~~js
+import { useState, useCallback } from 'react';
+
+export function useIncrement({
+  minValue = 100000,
+  maxValue = -100000,
+  initial = 0,
+  step = 1
+  }) {
+  const [value, setValue] = useState(initial);
+
+  const increment = useCallback(() => {
+    setValue(prevState => prevState + step > maxValue ? maxValue : prevState + step);
+  }, [maxValue, step]);
+
+  const decrement = useCallback(() => {
+    setValue(prevState => prevState + step < minValue ? minValue : prevState - step);
+  }, [minValue, step]);
+
+  const reset = useCallback(() => setValue(initial), [initial]);
+
+  return [value, { increment, decrement, reset }];
+}
+
+// Examples
+const Increment = () => {
+  const [volume, { increment, decrement, reset }] = useIncrement({ minValue: -10, maxValue: 10, initial: 0, step: 2 });
+
+  return(
+    <div>
+      <h1>volume</h1>
+      <button>{decrement}</button>
+      {volume}
+      <button>{increment}</button>
+      <button>{reset}</button>
+    </div>
+  );
+};
+
+export default Increment;
+~~~
