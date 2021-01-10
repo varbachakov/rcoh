@@ -8,6 +8,7 @@ const styles = css`
   @media (min-width: ${breakpoints.mobile}px) {
     .modal {
       position: relative;
+      z-index: ${zIndex.modal.default};
     }
   }
   
@@ -17,7 +18,7 @@ const styles = css`
     right: 0;
     bottom: 0;
     left: 0;
-    z-index: ${zIndex.modal};
+    z-index: ${zIndex.modal.background};
     background: ${colors.white.one};
     opacity: 0.7;
   }
@@ -27,7 +28,7 @@ const styles = css`
     top: 50%;
     right: 0;
     left: 0;
-    z-index: 9010;
+    z-index: ${zIndex.modal.content};
     display: flex;
     max-height: 100%;
     padding: 24px;
