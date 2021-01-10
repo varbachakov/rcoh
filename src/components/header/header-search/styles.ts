@@ -51,7 +51,7 @@ const styles = css`
     height: 40px;
     padding: 0 25px 0 0;
     outline: 0;
-    font-size: 13px;
+    font-size: 16px;
     background: none;
     border-width: 0 13px;
     border-color: transparent;

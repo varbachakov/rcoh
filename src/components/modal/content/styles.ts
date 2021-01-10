@@ -12,6 +12,7 @@ const styles = css`
   }
   
   .modal-content :global(.copy) {
+    right: inherit;
     color: ${colors.white.one};
   }
   
@@ -24,7 +25,6 @@ const styles = css`
     position: relative;
     width: 60px;
     height: 60px;
-    margin-top: 5px;
   }
 `;
 
