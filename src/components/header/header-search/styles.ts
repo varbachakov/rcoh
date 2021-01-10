@@ -35,7 +35,7 @@ const styles = css`
   }
   @media (min-width: ${breakpoints.mobile}px) {
     .header-search--active {
-      width: calc(100% - 150px);
+      width: calc(100% - 170px);
       margin-right: 20px;
     }
     

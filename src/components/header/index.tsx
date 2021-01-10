@@ -1,12 +1,7 @@
 import styles from './styles';
+import Modal from '@/src/components/modal';
 import { useState, useCallback, SyntheticEvent } from 'react';
 import { useHomeState } from '@/src/state/home-wrapper';
-import dynamic from 'next/dynamic';
-import ModalLoading from '@/src/components/modal/loading';
-const ModalDynamicNoSSR = dynamic(
-  () => import('@/src/components/modal'),
-  { ssr: false, loading: () => <ModalLoading/> }
-);
 import HeaderLogo from './header-logo';
 import HeaderSearch from './header-search';
 import HeaderGithub from './header-github';
@@ -31,7 +26,7 @@ function Header({ hooks }: PropsTypes): JSX.Element {
           <HeaderGithub isInputActive={isInputActive}/>
         </div>
       </div>
-      {isModalOpen && <ModalDynamicNoSSR hooks={hooks} hookName={hookName} handleOpenModal={handleOpenModal}/>}
+      <Modal hooks={hooks} hookName={hookName} handleOpenModal={handleOpenModal} isModalOpen={isModalOpen}/>
 
       <style jsx>
         {styles}

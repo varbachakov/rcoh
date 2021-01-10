@@ -1,14 +1,9 @@
 import styles from './styles';
-import dynamic from 'next/dynamic';
 import Copy from '@/src/components/copy';
 import ProductCard from '@/src/components/product/card';
-import ModalLoading from '@/src/components/modal/loading';
+import Modal from '@/src/components/modal';
 import { useHomeState } from '@/src/state/home-wrapper';
 import { PropsTypes } from './types';
-const ModalDynamicNoSSR = dynamic(
-  () => import('@/src/components/modal'),
-  { ssr: false, loading: () => <ModalLoading/> }
-);
 
 function Product({ hooks }: PropsTypes):JSX.Element {
   const { isModalOpen, hookName, handleOpenModal } = useHomeState();
@@ -25,7 +20,7 @@ function Product({ hooks }: PropsTypes):JSX.Element {
           ))}
         </ul>
       </div>
-      {isModalOpen && <ModalDynamicNoSSR hooks={hooks} hookName={hookName} handleOpenModal={handleOpenModal}/>}
+      <Modal hooks={hooks} hookName={hookName} handleOpenModal={handleOpenModal} isModalOpen={isModalOpen}/>
 
       <style jsx>
         {styles}

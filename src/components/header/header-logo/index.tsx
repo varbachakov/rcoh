@@ -7,7 +7,7 @@ type PropsTypes = {
 function HeaderLogo({ isInputActive }: PropsTypes ):JSX.Element {
   return (
     <span className={isInputActive ? 'logo logo--search' : 'logo'}>
-      RCOH
+      <img src='/images/logo.svg' alt='logo' />
 
       <style jsx>
         {styles}

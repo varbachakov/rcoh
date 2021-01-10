@@ -21,7 +21,7 @@ export function useSearch({ handleInputActive, hooks, isInputActive }: PropsType
       return;
     }
 
-    inputRef.current.focus();
+  (inputRef.current.querySelector('input[type="text"]') as HTMLInputElement).focus();
   }, [isInputActive]);
 
   return [{ value, searchList, inputRef }, handleChange];

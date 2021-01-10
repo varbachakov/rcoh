@@ -3,9 +3,8 @@ const zIndex = {
   header: 50,
   footer: 50,
   modal: {
-    default: 200,
-    background: 201,
-    content: 202
+    background: 200,
+    content: 201
   }
 };
 
