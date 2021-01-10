@@ -1,14 +1,12 @@
 import css from 'styled-jsx/css';
-import { breakpoints, zIndex, colors } from '@/src/assets/styles';
+import { zIndex, colors } from '@/src/assets/styles';
 
 const styles = css`
   .modal {
+    position: fixed;
+    top: 0;
     width: 100%;
-  }
-  @media (min-width: ${breakpoints.mobile}px) {
-    .modal {
-      position: relative;
-    }
+    height: 100%;
   }
   
   .modal__background {
