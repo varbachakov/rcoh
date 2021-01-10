@@ -51,7 +51,8 @@ const styles = css`
     height: 40px;
     padding: 0 25px 0 0;
     outline: 0;
-    font-size: 16px;
+    font-size: ${typography.fontSize.five};
+    line-height: ${typography.lineHeight.five};
     background: none;
     border-width: 0 13px;
     border-color: transparent;

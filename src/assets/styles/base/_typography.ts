@@ -3,6 +3,7 @@ const fontSize = {
   two: '15px',
   three: '17px',
   four: '28px',
+  five: '16px',
   logo: '26px',
   title: '38px',
 };
@@ -12,6 +13,7 @@ const lineHeight = {
   two: '20px',
   three: '24px',
   four: '36px',
+  five: '22px',
   logo: '30px',
   title: '42px',
 };
