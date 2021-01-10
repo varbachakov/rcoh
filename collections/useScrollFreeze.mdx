@@ -1,0 +1,33 @@
+~~~js
+import { useLayoutEffect } from 'react';
+
+export function useScrollFreeze(): void {
+  useLayoutEffect(() => {
+    const original = window.getComputedStyle(document.body).overflow;
+    document.body.style.overflow = "hidden";
+
+    return () => {
+      document.body.style.overflow = original;
+    };
+  }, []);
+}
+
+// Examples
+function ModalWrapper(props) {
+  if (!props.isModalOpen) return <></>;
+
+  return <Modal {...props}/>;
+}
+
+function Modal(props) {
+  useScrollFreeze();
+
+  return (
+    <div className="modal" {...props}>
+      ModalContent
+    </div>
+  );
+}
+
+export default ModalWrapper;
+~~~
