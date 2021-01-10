@@ -18,6 +18,7 @@ function HeaderSearch({ isInputActive, handleInputActive, hooks, handleOpenModal
           onFocus={handleInputActive}
           onChange={handleChange}
           name="search"
+          autoFocus={isInputActive}
           autoCorrect="off"
           autoComplete="off"
           spellCheck="false"

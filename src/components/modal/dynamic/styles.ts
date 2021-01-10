@@ -3,11 +3,7 @@ import { zIndex, colors } from '@/src/assets/styles';
 
 const styles = css`
   .modal {
-    position: fixed;
-    top: 0;
-    z-index: ${zIndex.modal.default};
     width: 100%;
-    height: 100%;
   }
   
   .modal__background {

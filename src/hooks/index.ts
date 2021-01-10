@@ -5,3 +5,4 @@ export * from './useHome';
 export * from './useDebounce';
 export * from './useSearch';
 export * from './useHover';
+export * from './useScrollFreeze';

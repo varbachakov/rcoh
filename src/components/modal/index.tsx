@@ -1,22 +1,15 @@
-import styles from './styles';
-import ModalContent from './content';
+import dynamic from 'next/dynamic';
+import ModalLoading from '@/src/components/modal/loading';
+const ModalDynamicNoSSR = dynamic(
+  () => import('./dynamic'),
+  { ssr: false, loading: () => <ModalLoading/> }
+);
 import { PropsTypes } from './types';
 
-function Modal({ hooks, hookName, handleOpenModal }: PropsTypes):JSX.Element {
-  return (
-    <div className="modal">
-      <div className="modal__background" />
-      <div className="modal__content">
-        <div className="modal__container">
-          <ModalContent hooks={hooks} hookName={hookName} handleOpenModal={handleOpenModal}/>
-        </div>
-      </div>
+function Modal(props: PropsTypes): JSX.Element {
+  if (!props.isModalOpen) return <></>;
 
-      <style jsx>
-        {styles}
-      </style>
-    </div>
-  );
+  return <ModalDynamicNoSSR {...props}/>;
 }
 
 export default Modal;
