@@ -65,7 +65,7 @@ const styles = css`
   }
 
   .hero-text__link:hover {
-    background-color: ${colors.white.one};
+    background-color: transparent;
     color: ${colors.dark.one};
   }
 `;

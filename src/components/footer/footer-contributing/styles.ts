@@ -35,7 +35,7 @@ const styles = css`
   }
 
   .footer-contributing__rcoh:hover {
-    background-color: ${colors.white.one};
+    background-color: transparent;
     color: ${colors.dark.one};
   }
   
