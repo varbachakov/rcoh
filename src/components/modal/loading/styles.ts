@@ -8,7 +8,7 @@ const styles = css`
     right: 0;
     bottom: 0;
     left: 0;
-    z-index: ${zIndex.modal};
+    z-index: ${zIndex.modal.background};
     background: ${colors.white.one};
     opacity: 0.9;
   }

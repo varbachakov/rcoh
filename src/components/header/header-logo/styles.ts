@@ -4,19 +4,12 @@ import { breakpoints } from '@/src/assets/styles';
 const styles = css`
   .logo {
     width: 90px;
-  }
-  
-  .logo--search {
-    display: none;
+    align-self: center;
   }
   
   @media (min-width: ${breakpoints.mobile}px) {
     .logo {
       width: 100px;
-    }
-    
-    .logo--search {
-      display: inline-block;
     }
   }
 `;

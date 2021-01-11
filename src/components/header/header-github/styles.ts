@@ -1,5 +1,5 @@
 import css from 'styled-jsx/css';
-import { colors, breakpoints } from '@/src/assets/styles';
+import { colors } from '@/src/assets/styles';
 
 const styles = css`
   .git {
@@ -8,19 +8,11 @@ const styles = css`
     color: ${colors.dark.one};
     cursor: pointer;
     flex-shrink: 0;
+    align-self: center;
   }
 
   .git:hover {
     color: ${colors.gray.two};
-  }
-  
-  .git--search {
-    display: none;
-  }
-  @media (min-width: ${breakpoints.mobile}px) {
-    .git--search {
-      display: inline-block;
-    }
   }
 `;
 
