@@ -1,69 +1,36 @@
 import css from 'styled-jsx/css';
-import { typography, colors, borderRadius, breakpoints, transitions } from '@/src/assets/styles';
+import { typography, colors, borderRadius, zIndex } from '@/src/assets/styles';
 
 const styles = css`
   .header-search {
+    position: relative;
     font-size: ${typography.fontSize.one};
     line-height: ${typography.lineHeight.one};
-    position: relative;
-    display: flex;
-    align-items: center;
-    justify-content: flex-end;
-    width: 122px;
-    height: 40px;
-    margin-left: auto;
-    margin-right: 20px;
-  }
-
-  .header-search--active {
-    width: 100%;
-    margin-right: 0;
-    transition: width ${transitions.duration['100']} ${transitions.easing.easeInOut};
-  }
-
-  .header-search--active .header-search__normal {
-    display: inline-block;
   }
 
   .header-search__normal {
-    position: relative;
-    display: none;
-    box-sizing: border-box;
+    display: inline-block;
     width: 100%;
     height: 40px;
     vertical-align: top;
-  }
-  @media (min-width: ${breakpoints.mobile}px) {
-    .header-search--active {
-      width: calc(100% - 170px);
-      margin-right: 20px;
-    }
-    
-    .header-search__normal {
-      display: inline-block;
-    }
   }
   
   .header-search__control {
     position: relative;
-    z-index: 2;
+    z-index: ${zIndex.search};
     width: 100%;
     height: 40px;
-    padding: 0 25px 0 0;
+    padding: 0 40px;
     outline: 0;
     font-size: ${typography.fontSize.five};
     line-height: ${typography.lineHeight.five};
     background: none;
-    border-width: 0 13px;
-    border-color: transparent;
-    border-style: solid;
-    vertical-align: top;
-    -webkit-tap-highlight-color: rgba(0,0,0,0);
+    border: none;
   }
   
   .header-search__box {
     position: absolute;
-    z-index: 1;
+    z-index: ${zIndex.default};
     top: 0;
     right: 0;
     bottom: 0;
@@ -71,20 +38,33 @@ const styles = css`
     border-radius: ${borderRadius.default}px;
     background-color: ${colors.white.two};
   }
-  
-  .header-search__button {
+
+  .header-search__search {
     position: absolute;
-    right: 5px;
-    z-index: 2;
-    width: 24px;
-    height: 24px;
-    color: ${colors.gray.four};
-    cursor: pointer;
-  }
-  
-  .header-search__button :global(svg) {
+    top: 10px;
+    left: 10px;
+    z-index: ${zIndex.search};
     width: 20px;
     height: 20px;
+    color: ${colors.gray.four};
+  }
+  
+  .header-search__search :global(svg) {
+    width: 20px;
+    height: 20px;
+  }
+
+  .header-search__clear {
+    position: absolute;
+    top: 0;
+    right: 0;
+    z-index: ${zIndex.search};
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 40px;
+    height: 40px;
+    color: ${colors.gray.four};
   }
 `;
 

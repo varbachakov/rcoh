@@ -1,12 +1,8 @@
 import styles from './styles';
 
-type PropsTypes = {
-  isInputActive: boolean
-}
-
-function HeaderLogo({ isInputActive }: PropsTypes ):JSX.Element {
+function HeaderLogo():JSX.Element {
   return (
-    <span className={isInputActive ? 'logo logo--search' : 'logo'}>
+    <span className='logo'>
       <img src='/images/logo.svg' alt='logo' />
 
       <style jsx>

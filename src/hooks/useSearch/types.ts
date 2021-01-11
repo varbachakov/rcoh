@@ -1,12 +1,14 @@
-import { ChangeEvent, RefObject, SyntheticEvent } from 'react';
+import { ChangeEvent } from 'react';
 import { HooksTypes } from '@/other/home-types';
 
 export type PropsType = {
-  isInputActive: boolean
   hooks: HooksTypes
-  handleInputActive: (event: SyntheticEvent) => void
+  isModalOpen: boolean
 }
-export type StateTypes = { value: string, searchList: HooksTypes, inputRef: RefObject<any> }
-export type FuncTypes = (event: ChangeEvent<{value: string}>) => void
+export type StateTypes = { value: string, searchList: HooksTypes }
+export type FuncTypes = {
+  handleChange: (event: ChangeEvent<{value: string}>) => void
+  handleClear: () => void
+}
 
 export type ReturnTypes = [StateTypes, FuncTypes]
