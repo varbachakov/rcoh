@@ -1,13 +1,10 @@
 import css from 'styled-jsx/css';
-import { colors } from '@/src/assets/styles';
+import { theme } from '@/src/assets/styles';
 
 const styles = css`
   .product {
     padding-bottom: 100px;
-  }
-  
-  .product :global(.copy) {
-    color: ${colors.blue.one};
+    background-color: ${theme.primary.colors.backgroundColorMain};
   }
   
   .product__item {

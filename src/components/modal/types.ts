@@ -1,9 +1,3 @@
-import { SyntheticEvent } from 'react';
-import { HooksTypes } from '@/other/home-types';
+import { PropsTypesApp } from '@/other/home-types';
 
-export type PropsTypes = {
-  hooks: HooksTypes
-  hookName: string
-  isModalOpen: boolean
-  handleOpenModal: (e: SyntheticEvent) => void
-}
+export type PropsTypes = PropsTypesApp

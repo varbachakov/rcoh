@@ -5,11 +5,14 @@ const ModalDynamicNoSSR = dynamic(
   { ssr: false, loading: () => <ModalLoading/> }
 );
 import { PropsTypes } from './types';
+import { useHomeState } from '@/src/state/home-wrapper';
 
-function Modal(props: PropsTypes): JSX.Element {
-  if (!props.isModalOpen) return <></>;
+function Modal({ hooks }: PropsTypes): JSX.Element {
+  const { isModalOpen, hookName, handleOpenModal } = useHomeState();
 
-  return <ModalDynamicNoSSR {...props}/>;
+  if (!isModalOpen) return <></>;
+
+  return <ModalDynamicNoSSR hooks={hooks} hookName={hookName} handleOpenModal={handleOpenModal}/>;
 }
 
 export default Modal;

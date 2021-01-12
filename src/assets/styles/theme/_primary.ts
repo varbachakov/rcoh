@@ -10,7 +10,8 @@ const primary = {
     text: colors.dark.one,
     backgroundColorBody: colors.white.one,
     backgroundColorHeader: colors.white.one,
-    backgroundColorFooter: colors.white.two,
+    backgroundColorMain: colors.white.three,
+    backgroundColorFooter: colors.white.one,
   }
 };
 

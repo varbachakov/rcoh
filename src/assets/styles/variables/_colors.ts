@@ -1,6 +1,7 @@
 const white = {
   one: "#fff",
   two: "#f5f5f5",
+  three: "#f2f5ff"
 };
 
 const blue = {

@@ -11,9 +11,9 @@ function Layout({ children, hooks }: PropsTypes): JSX.Element {
       </div>
       <div className="layout__body" data-testid="layout-body">
         {children}
-        <div className="layout__footer" data-testid="layout-footer">
-          <Footer/>
-        </div>
+      </div>
+      <div className="layout__footer" data-testid="layout-footer">
+        <Footer/>
       </div>
 
       <style jsx>

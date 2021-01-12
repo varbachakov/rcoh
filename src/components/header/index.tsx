@@ -1,5 +1,4 @@
 import styles from './styles';
-import Modal from '@/src/components/modal';
 import { useHomeState } from '@/src/state/home-wrapper';
 import HeaderLogo from './header-logo';
 import HeaderSearch from './header-search';
@@ -7,8 +6,7 @@ import HeaderGithub from './header-github';
 import { PropsTypes } from './types';
 
 function Header({ hooks }: PropsTypes): JSX.Element {
-  const { isModalOpen, hookName, handleOpenModal } = useHomeState();
-
+  const { isModalOpen, handleOpenModal } = useHomeState();
   return (
     <header className="header">
       <div className="container">
@@ -24,7 +22,6 @@ function Header({ hooks }: PropsTypes): JSX.Element {
           </div>
         </div>
       </div>
-      <Modal hooks={hooks} hookName={hookName} handleOpenModal={handleOpenModal} isModalOpen={isModalOpen}/>
 
       <style jsx>
         {styles}

@@ -4,6 +4,5 @@ import { HooksTypes } from '@/other/home-types';
 export type PropsTypes = {
   hooks: HooksTypes
   hookName: string
-  isModalOpen: boolean
   handleOpenModal: (e: SyntheticEvent) => void
 }

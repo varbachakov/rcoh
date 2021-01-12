@@ -5,7 +5,7 @@ import HeaderList from '@/src/components/header/header-list';
 import { PropsType } from './types';
 
 function HeaderSearch({ hooks, handleOpenModal, isModalOpen }: PropsType): JSX.Element {
-  const [state, { handleChange, handleClear }] = useSearch({ hooks, isModalOpen });
+  const [{ value, searchList }, { handleChange, handleClear }] = useSearch({ hooks, isModalOpen });
 
   return (
     <div className="header-search">
@@ -17,7 +17,7 @@ function HeaderSearch({ hooks, handleOpenModal, isModalOpen }: PropsType): JSX.E
           type="text"
           placeholder="Поиск"
           className="header-search__control"
-          value={state.value}
+          value={value}
           onChange={handleChange}
           name="search"
           autoFocus={true}
@@ -31,8 +31,8 @@ function HeaderSearch({ hooks, handleOpenModal, isModalOpen }: PropsType): JSX.E
         />
         <span className="header-search__box"/>
       </span>
-      {state.value && <button type="button" className="header-search__clear" onClick={handleClear} aria-label="clear"><ClosedSvg/></button>}
-      {state.value && state.searchList.length !== 0 && <HeaderList list={state.searchList} handleOpenModal={handleOpenModal}/>}
+      {value && <button type="button" className="header-search__clear" onClick={handleClear} aria-label="clear"><ClosedSvg/></button>}
+      <HeaderList value={value} list={searchList} handleOpenModal={handleOpenModal}/>
 
       <style jsx>
         {styles}

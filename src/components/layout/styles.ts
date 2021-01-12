@@ -1,21 +1,31 @@
 import css from 'styled-jsx/css';
+import { zIndex } from '@/src/assets/styles';
 
 const styles = css`
   .layout {
-    height: 100vh;
-    display: grid;
-    grid-template-columns: 1fr;
-    grid-template-rows: auto 1fr;
-    grid-template-areas: 'layout__header' 'layout__body';
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+  }
+  
+  .layout__header {
+    position: sticky;
+    top: 0;
+    z-index: ${zIndex.header};
   }
 
-  .layout__header { grid-area: layout__header; }
-  .layout__body { grid-area: layout__body; }
-
   .layout__body {
-    overflow: auto;
-    display: grid;
-    grid-template-rows: 1fr auto;
+    display: flex;
+    flex-flow: column;
+    flex-grow: 1;
+  }
+  
+  .layout__footer {
+    position: relative;
+    z-index: ${zIndex.footer};
+
+    bottom: 0;
+    flex: 0 0 auto;
   }
 `;
 

@@ -6,7 +6,7 @@ const styles = css`
     position: relative;
     padding: 80px 0;
     color: ${theme.dark.colors.text};
-    background-color: ${colors.blue.one};
+    background-color: ${colors.white.one};
   }
   
   .hero__grid {
@@ -16,7 +16,7 @@ const styles = css`
   }
   @media (min-width: ${breakpoints.tablet}px) {
     .hero {
-      padding: 80px 0;
+      padding: 80px 0 140px;
     }
     
     .hero__grid {
@@ -30,6 +30,7 @@ const styles = css`
     left: 0;
     bottom: -1px;
     width: 100%;
+    color: ${colors.white.three};
     line-height: 0;
     direction: ltr;
     overflow: hidden;

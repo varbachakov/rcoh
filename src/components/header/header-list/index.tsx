@@ -1,20 +1,14 @@
-import styles from './styles';
-import { PropsType } from './types';
+import dynamic from 'next/dynamic';
+const HeaderListDynamicNoSSR = dynamic(
+  () => import('./dynamic'),
+  { ssr: false }
+);
+import { PropsTypes } from './types';
 
-function HeaderList({ list, handleOpenModal }: PropsType): JSX.Element {
-  return(
-    <ul className="header-list">
-      {list.map((item, idx) => (
-        <li key={`HeaderList__${idx}__${item.hookName}`} className="header-list__item" onClick={handleOpenModal} data-hookname={item.hookName}>
-          <div className="header-list__text">{item.hookName.replace(/.mdx/,'')}</div>
-        </li>
-      ))}
+function HeaderList(props: PropsTypes): JSX.Element {
+  if (!props.value || !props.list.length) return <></>;
 
-        <style jsx>
-            {styles}
-        </style>
-    </ul>
-  );
+  return <HeaderListDynamicNoSSR {...props}/>;
 }
 
 export default HeaderList;

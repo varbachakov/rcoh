@@ -1,12 +1,11 @@
 import styles from './styles';
 import Copy from '@/src/components/copy';
 import ProductCard from '@/src/components/product/card';
-import Modal from '@/src/components/modal';
 import { useHomeState } from '@/src/state/home-wrapper';
 import { PropsTypes } from './types';
 
 function Product({ hooks }: PropsTypes):JSX.Element {
-  const { isModalOpen, hookName, handleOpenModal } = useHomeState();
+  const { handleOpenModal } = useHomeState();
 
   return (
     <section className="product">
@@ -20,7 +19,6 @@ function Product({ hooks }: PropsTypes):JSX.Element {
           ))}
         </ul>
       </div>
-      <Modal hooks={hooks} hookName={hookName} handleOpenModal={handleOpenModal} isModalOpen={isModalOpen}/>
 
       <style jsx>
         {styles}
