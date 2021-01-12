@@ -1,0 +1,36 @@
+~~~js
+import { useState, useEffect } from 'react';
+
+export function useDebounce({ value, delay }) {
+  const [debouncedValue, setDebouncedValue] = useState(value);
+
+  useEffect(() => {
+      const handler = setTimeout(() => {
+        setDebouncedValue(value);
+      }, delay);
+
+      return () => {
+        clearTimeout(handler);
+      };
+    },
+    [delay, value]
+  );
+
+  return [debouncedValue];
+}
+
+// Examples
+const Debounce = () => {
+  const [value, setValue] = useState('');
+  const [debouncedValue] = useDebounce({ value, delay: 500 });
+
+  return (
+    <div>
+      <span>{debouncedValue}</span>
+      <input onChange={(event) => setValue(event.target.value)}/>
+    </div>
+  );
+};
+
+export default Debounce;
+~~~

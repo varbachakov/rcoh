@@ -5,7 +5,7 @@ import { PropsType, ReturnTypes } from './types';
 
 export function useSearch({ hooks, isModalOpen }: PropsType): ReturnTypes {
   const [value, setValue] = useState('');
-  const [debounceValue] = useDebounce({ value: value.trim(), delay: 500 });
+  const [debounceValue] = useDebounce({ value, delay: 500 });
   const searchList = useMemo(() => getSearchList(debounceValue, hooks), [hooks, debounceValue]);
   const handleClear = (): void => setValue('');
   const handleChange = (event: ChangeEvent<{value: string}>): void => setValue(event.target.value);
