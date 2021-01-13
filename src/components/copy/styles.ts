@@ -1,23 +1,11 @@
 import css from 'styled-jsx/css';
-import { colors, transitions, breakpoints } from '@/src/assets/styles';
+import { colors, transitions } from '@/src/assets/styles';
 
 const styles = css`
   .copy {
-    position: absolute;
-    top: 0;
-    right: 20px;
-    height: 100%;
-    width: 100%;
-    max-width: 50px;
     display: flex;
     align-items: center;
     justify-content: center;
-  }
-  @media (min-width: ${breakpoints.mobile}px) {
-    .copy {
-      right: 0;
-      max-width: 100px;
-    }
   }
 
   .copy:focus {
