@@ -1,5 +1,5 @@
 import css from 'styled-jsx/css';
-import { typography, breakpoints, colors } from '@/src/assets/styles';
+import { typography, breakpoints } from '@/src/assets/styles';
 
 const styles = css`
   .product-card {
@@ -9,14 +9,6 @@ const styles = css`
 
   .product-card__content {
     padding: 20px 30px;
-    background-color: ${colors.white.one};
-    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.04),0 4px 24px rgba(0, 0, 0, 0.04);
-    border-radius: 12px;
-    transition: box-shadow .3s cubic-bezier(.22,.61,.36,1);
-  }
-
-  .product-card__content:hover {
-    box-shadow: 0 3px 10px rgba(0, 0, 0, 0.15);
   }
 
   .product-card__action {
