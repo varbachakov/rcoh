@@ -8,7 +8,7 @@ const styles = css`
   }
 
   .product-card__content {
-    padding: 20px 30px;
+    padding: 20px 10px;
   }
 
   .product-card__action {
@@ -22,7 +22,12 @@ const styles = css`
     line-height: ${typography.lineHeight.three};
     font-weight: ${typography.fontWeight.three};
   }
+  
   @media (min-width: ${breakpoints.mobile}px) {
+    .product-card__content {
+      padding: 20px 30px;
+    }
+    
     .product-card__text {
       font-size: ${typography.fontSize.four};
       line-height: ${typography.lineHeight.four};

@@ -46,4 +46,4 @@ const fontFace = css.global`
     }
 `;
 
-export { fontFace }
+export { fontFace };

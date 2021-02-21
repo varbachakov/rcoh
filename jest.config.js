@@ -11,6 +11,7 @@ module.exports = {
     '@/other/(.*)': '<rootDir>/other/$1',
     '@/test/(.*)': '<rootDir>/test/$1',
     '@/src/(.*)': '<rootDir>/src/$1',
+    '@/db/(.*)': '<rootDir>/db/$1',
   },
   setupFilesAfterEnv: ['<rootDir>/other/setupTests.ts']
 };

@@ -5,3 +5,5 @@ export * from './_copy';
 export * from './_loader';
 export * from './_shape';
 export * from './_closed';
+export * from './_favorites';
+export * from './_favorites-active';

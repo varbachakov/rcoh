@@ -8,9 +8,13 @@ export function useCopy({ text, initCopy }: PropsTypes): ReturnTypes {
     if (!copy) return;
 
     navigator.clipboard && navigator.clipboard.writeText(text);
-    setTimeout(() => {
+    const clearTime = setTimeout(() => {
       setCopy(false);
     }, 800);
+
+    return () => {
+      clearTimeout(clearTime);
+    };
   }, [copy, text]);
 
   return [copy, setCopy];

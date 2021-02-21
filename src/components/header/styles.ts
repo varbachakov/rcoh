@@ -14,7 +14,7 @@ const styles = css`
     grid-template-rows: 1fr 1fr;
     gap: 10px 0;
     grid-template-areas:
-    "header__logo . header__git"
+    "header__logo . header__signin"
     "header__search header__search header__search";
   }
   
@@ -24,8 +24,8 @@ const styles = css`
     grid-area: header__logo;
     align-self: center;
   }
-  .header__git {
-    grid-area: header__git;
+  .header__signin {
+    grid-area: header__signin;
     align-self: center;
   }
 
@@ -35,7 +35,7 @@ const styles = css`
       grid-template-columns: 90px 1fr 30px;
       grid-template-rows: 1fr;
       gap: 30px;
-      grid-template-areas: "header__logo header__search header__git";
+      grid-template-areas: "header__logo header__search header__signin";
     }
   }
 `;

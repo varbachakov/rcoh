@@ -1,6 +1,6 @@
 import { useReducer, useCallback, SyntheticEvent } from 'react';
 import { rootReducer } from '@/src/state/home-wrapper';
-import { OPEN_MODAL } from '@/src/constants/home';
+import { ADD_FAVORITE, OPEN_MODAL, ADD_FAVORITE_START, GET_FAVORITE_HOOKS } from '@/src/constants/home';
 import { ReturnTypes, PropsTypes } from './types';
 
 export function useHome(initialState: PropsTypes): ReturnTypes {
@@ -12,5 +12,37 @@ export function useHome(initialState: PropsTypes): ReturnTypes {
     dispatch({ type: OPEN_MODAL, payload });
   }, []);
 
-  return [{ ...state, handleOpenModal }];
+  const addFavoriteHook = useCallback(async (hookName) => {
+    dispatch({ type: ADD_FAVORITE_START });
+
+    const res = await fetch(`${process.env.NEXT_PUBLIC_API_HOST}/api/hook/`, {
+      method: 'POST',
+      body: JSON.stringify({ hookName }),
+      headers: {
+        'Content-Type': 'application/json'
+      }
+    });
+
+    const { data } = await res.json();
+    dispatch({ type: ADD_FAVORITE, payload: data });
+  }, []);
+
+  const addSessionHooks = useCallback((sessionHooks) => {
+    dispatch({ type: ADD_FAVORITE, payload: sessionHooks });
+  }, []);
+
+  const getFavoriteHooks = useCallback(async () => {
+    const res = await fetch(`${process.env.NEXT_PUBLIC_API_HOST}/api/get-hooks/`, {
+      method: 'POST',
+      headers: {
+        'Content-Type': 'application/json'
+      }
+    });
+
+    const { data } = await res.json();
+
+    dispatch({ type: GET_FAVORITE_HOOKS, payload: data });
+  }, []);
+
+  return [{ ...state, handleOpenModal, addFavoriteHook, addSessionHooks, getFavoriteHooks }];
 }
