@@ -1,6 +1,7 @@
 {
   "name":"React custom of hooks",
   "short_name":"RCOH",
+  "description": "react, react-hook, react-hooks, react custom hooks, hooks",
   "icons":[
     {
       "src":"/favicon-16x16.png",

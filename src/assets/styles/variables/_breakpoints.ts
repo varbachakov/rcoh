@@ -4,4 +4,4 @@ const breakpoints = {
   mobile: 768
 };
 
-export { breakpoints }
+export { breakpoints };

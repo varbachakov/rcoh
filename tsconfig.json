@@ -19,11 +19,12 @@
     "sourceMap": true,
     "forceConsistentCasingInFileNames": true,
     "resolveJsonModule": true,
-    "baseUrl": ".",
+    "baseUrl": "./",
     "paths": {
       "@/other/*": ["other/*"],
       "@/src/*": ["src/*"],
-      "@/utils/*": ["utils/*"]
+      "@/utils/*": ["utils/*"],
+      "@/db/*": ["db/*"]
     }
   },
   "exclude": ["dist", ".next", "out", "next.config.js"],

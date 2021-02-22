@@ -27,6 +27,7 @@
     "react/prop-types": 0,
     "@typescript-eslint/explicit-function-return-type": 0,
     "@typescript-eslint/explicit-member-accessibility": 0,
+    "no-shadow": 0,
     "@typescript-eslint/indent": 0,
     "@typescript-eslint/member-delimiter-style": 0,
     "@typescript-eslint/no-explicit-any": 0,
@@ -37,6 +38,7 @@
     "no-unused-expressions": ["error", { "allowShortCircuit": true }],
     "@typescript-eslint/no-unused-vars": [2, {"argsIgnorePattern": "^_"}],
     "no-console": [2, {"allow": ["warn", "error", "info"]}],
-    "consistent-return": 0
+    "consistent-return": 0,
+    "new-cap": ["error", { "capIsNew": false }]
   }
 }

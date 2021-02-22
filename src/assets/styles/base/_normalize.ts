@@ -77,4 +77,4 @@ const normalize = css.global`
     }
 `;
 
-export { normalize }
+export { normalize };
