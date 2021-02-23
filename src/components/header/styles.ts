@@ -10,7 +10,7 @@ const styles = css`
 
   .header__mode {
     display: grid;
-    grid-template-columns: 90px 1fr 30px;
+    grid-template-columns: 90px 1fr 90px;
     grid-template-rows: 1fr 1fr;
     gap: 10px 0;
     grid-template-areas:
@@ -18,7 +18,9 @@ const styles = css`
     "header__search header__search header__search";
   }
   
-  .header__search { grid-area: header__search; }
+  .header__search {
+    grid-area: header__search;
+  }
   
   .header__logo {
     grid-area: header__logo;
@@ -31,8 +33,6 @@ const styles = css`
 
   @media (min-width: ${breakpoints.mobile}px) {
     .header__mode {
-      display: grid;
-      grid-template-columns: 90px 1fr 30px;
       grid-template-rows: 1fr;
       gap: 30px;
       grid-template-areas: "header__logo header__search header__signin";
