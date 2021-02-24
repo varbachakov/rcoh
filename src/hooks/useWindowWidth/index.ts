@@ -1,0 +1,19 @@
+import { useState, useEffect } from 'react';
+import { ReturnTypes } from './types';
+
+export const useWindowWidth = (): ReturnTypes => {
+  const [width, setWidth] = useState(window.innerWidth);
+
+  useEffect(() => {
+    const handleResize = () => {
+      setWidth(window.innerWidth);
+    };
+    window.addEventListener('resize', handleResize);
+
+    return () => {
+      window.removeEventListener('resize', handleResize);
+    };
+  });
+
+  return [width];
+};

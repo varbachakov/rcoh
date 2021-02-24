@@ -1,0 +1,23 @@
+~~~js
+import { useWindowWidth } from '@/src/hooks';
+
+export const useIsMobile = (breakpoint) => {
+  const [width] = useWindowWidth();
+
+  return breakpoint < width;
+};
+
+
+// Examples
+const Mobile = () => {
+  const isMobile = useIsMobile();
+
+  return(
+    <div style={{display: isMobile ? 'none' : 'flex'}}>
+      <div>isMobile</div>
+    </div>
+  );
+};
+
+export default Mobile;
+~~~
